@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@100&display=swap');
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://fotocreativo.com/wp-content/uploads/2021/01/fotografos-de-moda.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    gap: 20px;
+    left: 400px;
+    margin-top: 20px;
+}
+
+.bar a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bar a:hover{
+    text-decoration: overline 3px;
+    color: rgb(206, 206, 206);
+
+}
+
+.container-body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 150px;
+    left: 350px;
+    font-size: 40px;
+    color: white;
+}
+
+.container-body .presentacion{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-weight:bold;
+    left: 10px;
+}
+
+.container-body .title-bienvenida .title-container{
+    font-family: 'Great Vibes', cursive;
+    position: relative;
+    margin-top: 70px;
+    display: flex;
+    font-size: 80px;
+    left: 30px;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica,"sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #cfef00;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 20px;
+
+}
+
+button:hover {
+    background: #c4e201;
+}
+
+button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+}
+
+button:hover svg {
+    transform: translateX(5px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 700px) {
+    body{
+        position: relative;
+        right: 450px;
+    }
+
+    .header .bar{
+        position: absolute;
+        right: -500px;
+        margin-top: 50px;
+        font-size: 15px;
+
+    }
+    .container-body{
+        margin: 100px;
+        left: 350px;
+        font-size: 35px;
+    }
+
+    .container-body .title-bienvenida .title-container{
+        font-size: 50px;
+        margin: 50px 0 0 0;
+    }
+}

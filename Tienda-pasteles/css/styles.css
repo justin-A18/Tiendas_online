@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Great+Vibes&family=Noto+Serif+Georgian:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root{
+    /* header */
+    --color-letra:color: rgb(21, 21, 21);
+    --border: thin solid;
+    --border-color: rgb(200, 116, 0);
+    --hover:rgb(130, 109, 99);
+    /* card-body */
+    --color-cards-presentacion:rgb(255, 244, 239);
+    --fuente:"Crimson Text", Georgia, serif;
+
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuente);
+    width: 100%;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bar{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.bar a{
+    text-decoration: none;
+    color: var(--color-letra);
+}
+
+.bar a:hover{
+    text-decoration: underline 2px var(--border-color);
+    color: var(--hover);
+}
+
+.container-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 70px 170px;
+}
+
+.container-card img{
+    width: 300px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-inspiracion{
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -30px 0 30px 0;
+}
+
+.content-inspiration > span{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    
+}
+
+.content-inspiration button{
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 50px;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+.btn {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    background: #ffe4e1;
+    color: rgb(59, 55, 55);
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button:hover {
+    color: black;
+}
+
+button:after {
+    content: "";
+    background: #fdcae1 ;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.card-prensentacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 170px;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.card-prensentacion span{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+
+.card-presentacion-1 , .card-presentacion-2,
+.card-presentacion-3{
+    background-color: #fae6d6;
+    border-right: thin solid rgb(250, 199, 137);
+    width:400px;
+    height: 300px;
+    opacity: 0.8;
+    padding: 10px 20px;
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    margin: 100px;
+}
+
+.content-form label{
+    font-size: 30px;
+    position: relative;
+}
+
+.content-form input{
+    width: 600px; 
+    height: 50px;
+    outline: none;
+    font-size: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.content-form input:focus{
+    box-shadow: 0px 0px 0px 1px black;
+}
+
+.content-form button{
+    background-color: #fcbdd9;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    margin: 100px;
+    gap: 30px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media (max-width: 750px) {
+    .header{
+        font-size: 13px;
+    }
+
+    .container-card img{
+        width: 100px;
+    }
+
+    .style img{
+        width: 800px;
+    }
+
+    .container-inspiracion span{
+        font-size: 30px;
+    }
+
+    .card-prensentacion span{
+        font-size: 15px;
+        margin: 0px 10px;
+        text-align: center;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-presentacion-1 , .card-presentacion-2,
+    .card-presentacion-3{
+        width: 800px;
+        height: 300px;
+        padding: 20px;
+        font-size: 10px;
+    }
+
+    .content-form input{
+        width: 250px;
+        margin: 20px;
+    }
+
+    .content-form{
+        text-align: center;
+    }
+}
